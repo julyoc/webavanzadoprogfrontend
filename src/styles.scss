@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Import normalize Browser */
+@import '~normalize.css/normalize.css';
+
+/* Custom grid layout. */
+$grid-columns: 12 !default;
+$grid-gutter-width: 1em !default;
+
+
+/* theme font colors and background*/
+$body-bg: white;
+$body-color: black;
+
+$theme-colors: (
+  "test-color": #d99400,
+  "custom-color": #dd6f57
+);
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

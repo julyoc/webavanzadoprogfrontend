@@ -1,0 +1,25 @@
+<header class="container-fluid">
+    <nav class="row">
+        <div class="col-md-7">
+            <nav ngbNav class="nav-tabs">
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/" routerLinkActive>
+                        <fa-icon [icon]="icons.home"></fa-icon>
+                        &nbsp;
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/user">
+                        <fa-icon [icon]="icons.edit"></fa-icon>
+                        &nbsp;
+                        <span>Usuario</span>
+                    </a>
+                </li>
+            </nav>
+        </div>
+        <div class="col-md-5">
+            <h3>App for Freelancers</h3>
+        </div>
+    </nav>
+</header>
