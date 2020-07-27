@@ -16,6 +16,7 @@ import { CategService } from './routes/categ/categ.service';
 import { UsersComponent } from './routes/users/users.component';
 import { UsersService } from './routes/users/users.service';
 import { AddComponent } from './routes/users/add/add.component';
+import { UserviewComponent } from './routes/users/userview/userview.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AddComponent } from './routes/users/add/add.component';
     FooterComponent,
     CategComponent,
     UsersComponent,
-    AddComponent
+    AddComponent,
+    UserviewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+<div *ngFor="let usr of data.slice((page-1)*datapagelen, page*datapagelen)">
+    <div class="row">
+        <div class="col-md-3">Username: <strong>{{usr.username}}</strong></div>
+        <div class="col-md-3">Nombre: <strong>{{usr.name}}</strong></div>
+        <div class="col-md-3">Email: <strong>{{usr.email}}</strong></div>
+        <div class="col-md-3">Contraseña: <strong>{{usr.password}}</strong></div>
+    </div>
+    <hr>
+    <br>
+</div>
+<br><br>
+<div class="row">
+    <div class="col-md-12">
+        <ngb-pagination [collectionSize]="longitud*10" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+    </div>
+</div>

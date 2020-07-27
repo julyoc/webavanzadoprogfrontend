@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Users } from './users';
-import { UsersService } from './users.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-users',
@@ -10,17 +9,20 @@ import { UsersService } from './users.service';
 export class UsersComponent implements OnInit {
 
 
-  data: Users[];
-  longitud: number;
-  page = 1;
+  datapagelen = 3;
+  fgroup: FormGroup;
 
-  constructor(@Inject(UsersService) private userdata: UsersService) { }
+  constructor() { 
+    this.fgroup = new FormGroup({
+      cantidad: new FormControl(this.datapagelen, [Validators.required])
+    });
+  }
 
   ngOnInit(): void {
-    this.userdata.getAll().subscribe(value => {
-      this.data = value;
-      this.longitud = Math.floor(value.length/10)+1;
-    });
+  }
+
+  onsubmit() {
+    this.datapagelen = this.fgroup.value.cantidad;
   }
 
 }

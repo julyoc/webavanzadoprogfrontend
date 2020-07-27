@@ -9,7 +9,7 @@ import { Users } from './users';
 })
 export class UsersService {
 
-  private baseUrl = 'http://localhost:5000/api/v0/user/';
+  private baseUrl = 'https://proyecto-web-freelancer.web.app/api/v0/user';
   private header = new HttpHeaders();
 
   constructor(@Inject(HttpClient) private http: HttpClient) { 
