@@ -11,9 +11,9 @@ export class CategComponent implements OnInit {
   constructor(@Inject(CategService) private service: CategService) { }
 
   ngOnInit(): void {
-    this.service.postCateg({name: "categ2", description: "categ3"}).subscribe(value => {
+    /*this.service.postCateg({name: "categ2", description: "categ3"}).subscribe(value => {
       console.log(value);
-    });
+    });*/
     this.service.getAllCateg().subscribe(value => {
       console.log(value);
     });

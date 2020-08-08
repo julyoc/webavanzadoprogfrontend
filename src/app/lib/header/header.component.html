@@ -1,6 +1,6 @@
 <header class="container-fluid">
     <nav class="row">
-        <div class="col-md-7">
+        <div class="col-md-9">
             <nav ngbNav class="nav-tabs">
                 <li ngbNavItem>
                     <a ngbNavLink routerLink="/" routerLinkActive>
@@ -16,9 +16,51 @@
                         <span>Usuario</span>
                     </a>
                 </li>
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/categ">
+                        <fa-icon [icon]="icons.edit"></fa-icon>
+                        &nbsp;
+                        <span>Categoria</span>
+                    </a>
+                </li>
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/subcateg">
+                        <fa-icon [icon]="icons.edit"></fa-icon>
+                        &nbsp;
+                        <span>subCategoria</span>
+                    </a>
+                </li>
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/rate">
+                        <fa-icon [icon]="icons.edit"></fa-icon>
+                        &nbsp;
+                        <span>Rate</span>
+                    </a>
+                </li>
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/status">
+                        <fa-icon [icon]="icons.edit"></fa-icon>
+                        &nbsp;
+                        <span>Status Contract</span>
+                    </a>
+                </li>
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/creator">
+                        <fa-icon [icon]="icons.edit"></fa-icon>
+                        &nbsp;
+                        <span>Creator</span>
+                    </a>
+                </li>
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/contract">
+                        <fa-icon [icon]="icons.edit"></fa-icon>
+                        &nbsp;
+                        <span>Contract</span>
+                    </a>
+                </li>
             </nav>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-3">
             <h3>App for Freelancers</h3>
         </div>
     </nav>

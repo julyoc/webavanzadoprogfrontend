@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>userId</th>
+            <th>creations</th>
+            <th>ratings</th>
+            <th>categories</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dat of data; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{dat.userId}}</td>
+            <td>{{dat.creations}}</td>
+            <td>{{dat.ratings}}</td>
+            <td>{{dat.categories}}</td>
+            <td>
+                <fa-icon [icon]="icons.edit"></fa-icon>
+                <fa-icon [icon]="icons.trush"></fa-icon>
+            </td>
+        </tr>
+    </tbody>
+</table>

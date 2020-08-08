@@ -17,6 +17,17 @@ import { UsersComponent } from './routes/users/users.component';
 import { UsersService } from './routes/users/users.service';
 import { AddComponent } from './routes/users/add/add.component';
 import { UserviewComponent } from './routes/users/userview/userview.component';
+import { CategShowComponent } from './routes/categ/categ-show/categ-show.component';
+import { SubcategComponent } from './routes/subcateg/subcateg.component';
+import { RateComponent } from './routes/rate/rate.component';
+import { ContractComponent } from './routes/contract/contract.component';
+import { StatuComponent } from './routes/statu/statu.component';
+import { CreatorComponent } from './routes/creator/creator.component';
+import { ContractShowComponent } from './routes/contract/contract-show/contract-show.component';
+import { CreatorShowComponent } from './routes/creator/creator-show/creator-show.component';
+import { RateShowComponent } from './routes/rate/rate-show/rate-show.component';
+import { StatusShowComponent } from './routes/statu/status-show/status-show.component';
+import { SubcategShowComponent } from './routes/subcateg/subcateg-show/subcateg-show.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +38,18 @@ import { UserviewComponent } from './routes/users/userview/userview.component';
     CategComponent,
     UsersComponent,
     AddComponent,
-    UserviewComponent
+    UserviewComponent,
+    CategShowComponent,
+    SubcategComponent,
+    RateComponent,
+    ContractComponent,
+    StatuComponent,
+    CreatorComponent,
+    ContractShowComponent,
+    CreatorShowComponent,
+    RateShowComponent,
+    StatusShowComponent,
+    SubcategShowComponent
   ],
   imports: [
     BrowserModule,

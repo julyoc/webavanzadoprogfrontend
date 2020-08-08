@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cat of categ; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{cat.name}}</td>
+            <td>{{cat.description}}</td>
+            <td>
+                <fa-icon [icon]="icons.edit"></fa-icon>
+                <fa-icon [icon]="icons.trush"></fa-icon>
+            </td>
+        </tr>
+    </tbody>
+</table>

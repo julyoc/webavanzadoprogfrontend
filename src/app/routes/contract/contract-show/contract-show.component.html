@@ -1,0 +1,31 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>rateId</th>
+            <th>userId</th>
+            <th>creatorId</th>
+            <th>name</th>
+            <th>description</th>
+            <th>charged</th>
+            <th>paidOut</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dat of data; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{dat.rateId}}</td>
+            <td>{{dat.userId}}</td>
+            <td>{{dat.creatorId}}</td>
+            <td>{{dat.name}}</td>
+            <td>{{dat.description}}</td>
+            <td>{{dat.charged}}</td>
+            <td>{{dat.paidOut}}</td>
+            <td>
+                <fa-icon [icon]="icons.edit"></fa-icon>
+                <fa-icon [icon]="icons.trush"></fa-icon>
+            </td>
+        </tr>
+    </tbody>
+</table>

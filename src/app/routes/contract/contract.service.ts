@@ -3,42 +3,46 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-
-export interface categ {
-  name?: string;
-  description?: string;
+export interface contract {
+  rateId?: string;
+  userId?: string;
+  creatorId?: string;
+  name: string;
+  description: string;
+  charged: boolean;
+  paidOut: boolean;
 }
 
 @Injectable({
   providedIn: 'root'
 })
-export class CategService {
+export class ContractService {
 
-  private baseUrl = 'https://proyecto-web-freelancer.web.app/api/v0/categories';
+  private baseUrl = 'https://proyecto-web-freelancer.web.app/api/v0/contract';
   private header = new HttpHeaders();
 
   constructor(@Inject(HttpClient) private http: HttpClient) { 
     this.header.set('Content-Type', 'application/json; charset=utf-8');
   }
 
-  getCateg(id: string): Observable<categ> {
-    return this.http.get(this.baseUrl.concat(`?categoriesId=${id}`), {headers: this.header}).pipe(catchError(this.handleError));
+  getCateg(id: string): Observable<any> {
+    return this.http.get(this.baseUrl.concat(`?contractId=${id}`), {headers: this.header}).pipe(catchError(this.handleError));
   }
 
   getAllCateg(): Observable<any> {
     return this.http.get(this.baseUrl, {headers: this.header}).pipe(catchError(this.handleError));
   }
 
-  postCateg(data: categ): Observable<any> {
-    return this.http.post(this.baseUrl, data, {headers: this.header}).pipe(catchError(this.handleError));
+  postCateg(data: contract): Observable<any> {
+    return this.http.post(this.baseUrl.concat(`rateId?=${data.rateId}&userId=${data.userId}&creatorId=${data.creatorId}`), data, {headers: this.header}).pipe(catchError(this.handleError));
   }
 
-  updateCateg(data: categ): Observable<any> {
-    return this.http.put(this.baseUrl, data, {headers: this.header}).pipe(catchError(this.handleError));
+  updateCateg(data: contract, id: string): Observable<any> {
+    return this.http.put(this.baseUrl.concat(`?contractId=${id}`), data, {headers: this.header}).pipe(catchError(this.handleError));
   }
 
   deleteCateg(id: string): Observable<any> {
-    return this.http.delete(this.baseUrl.concat(`?categoriesId=${id}`), {headers: this.header}).pipe(catchError(this.handleError));
+    return this.http.delete(this.baseUrl.concat(`?contractId=${id}`), {headers: this.header}).pipe(catchError(this.handleError));
   }
 
   private handleError(error: HttpErrorResponse) {
